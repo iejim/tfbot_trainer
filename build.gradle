@@ -1,0 +1,47 @@
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+buildDir = "devel"
+libsDirName = "lib"
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/']
+        }
+        compileClasspath += sourceSets.main.output + configurations.compile
+        runtimeClasspath += output + compileClasspath
+    }
+}
+
+repositories {
+  maven {
+    url "http://repository.springsource.com/maven/bundles/release"
+  }
+  maven {
+    url "http://repository.springsource.com/maven/bundles/external"
+  }
+  maven {
+    url "https://github.com/rosjava/rosjava_mvn_repo/raw/melodic"
+  }
+  
+  mavenCentral()
+  
+}
+
+dependencies {
+  implementation 'org.ros.rosjava_core:rosjava:0.3.6'
+  implementation 'org.ros.rosjava_messages:std_msgs:0.5.9'
+  //implementation 'commons-logging:commons-logging:1.2'
+  //implementation 'commons-codec:commons-codec:1.10'
+}
+
+copy {
+   println "Copiando"
+   from configurations.runtime
+   into "$buildDir/lib"
+}

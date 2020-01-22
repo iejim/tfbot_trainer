@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - JavaBot",
+            "request": "launch",
+            "mainClass": "JavaBot",
+            "projectName": "javabot"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DemoFile",
+            "request": "launch",
+            "mainClass": "demo.DemoFile",
+            "projectName": "javabot"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "javabot"
+        }
+    ]
+}
