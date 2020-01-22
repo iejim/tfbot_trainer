@@ -5,4 +5,4 @@
 # Directorios autogenerados
 .gradle/
 bin/**
-lib/**
+#lib/**

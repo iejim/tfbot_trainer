@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Created-By: 11.0.4 (Ubuntu)
+Tool: Bnd-3.4.0.201707252008
+Bnd-LastModified: 1576769777525
+Export-Package: tfbot_msgs;version="0.0.0";uses:="org.ros.internal.messa
+ ge"
+Import-Package: org.ros.internal.message
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Bundle-SymbolicName: org.ros.rosjava_messages.tfbot_msgs
+Bundle-Version: 0.0.0
+Bundle-Name: tfbot_msgs
+
